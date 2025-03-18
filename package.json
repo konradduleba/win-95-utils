@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Utils for Windows 95",
   "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "start": "storybook dev -p 6006"
