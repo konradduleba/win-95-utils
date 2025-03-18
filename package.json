@@ -44,14 +44,6 @@
     "access": "public"
   },
   "exports": {
-    "./package.json": "./package.json",
-    "./forms": {
-      "import": "./dist/forms/index.js",
-      "types": "./dist/forms/index.d.ts"
-    },
-    "./icons": {
-      "import": "./dist/icons/index.js",
-      "types": "./dist/icons/index.d.ts"
-    }
+    "./*": "./dist/*"
   }
 }
