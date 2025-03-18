@@ -3,5 +3,5 @@ export type HelloWorldProps = {
 };
 
 export const helloWorld = ({ name }: HelloWorldProps) => {
-  return `Hello, ${name}`;
+  return `Hello, ${name}. Nice`;
 };
