@@ -1,0 +1,30 @@
+{
+  "name": "@dlkn/win-95-utils",
+  "version": "1.0.0",
+  "description": "Utils for Windows 95",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konradduleba/win-95-utils.git"
+  },
+  "author": "Konrad Duleba kon.duleba@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konradduleba/win-95-utils/issues"
+  },
+  "homepage": "https://github.com/konradduleba/win-95-utils#readme",
+  "devDependencies": {
+    "semantic-release": "^24.2.3",
+    "typescript": "^5.8.2"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
