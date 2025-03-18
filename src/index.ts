@@ -1,7 +1,2 @@
-export type HelloWorldProps = {
-  name: string;
-};
-
-export const helloWorld = ({ name }: HelloWorldProps) => {
-  return `Hello, ${name}. Nice`;
-};
+export * from "./forms";
+export * from "./icons";
