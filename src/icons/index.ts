@@ -1,1 +1,1 @@
-export { IconHome } from "./icon-home";
+export * from "./icon-home";

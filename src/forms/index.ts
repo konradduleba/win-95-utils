@@ -1,1 +1,1 @@
-export { FormButton } from "./form-button";
+export * from "./form-button";
