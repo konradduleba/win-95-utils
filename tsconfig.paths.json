@@ -2,8 +2,13 @@
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-      "@dlkn/win-95-utils/forms": ["forms/index.ts"],
-      "@dlkn/win-95-utils/icons": ["icons/index.ts"]
+      "@forms/*": ["forms/*"],
+      "@icons/*": ["icons/*"],
+      "@typography/*": ["typography/*"],
+      "@providers/*": ["providers/*"],
+      "@buttons/*": ["buttons/*"],
+      "@hooks/*": ["hooks/*"],
+      "@components/*": ["components/*"]
     }
   }
 }

@@ -1,0 +1,6 @@
+export {
+  TEST_DECORATED_LETTER,
+  TEST_TEXT,
+  TEST_TEXT_DECORATION,
+  TEST_NOT_DECORATED_LETTER,
+} from "./test-data";

@@ -1,0 +1,9 @@
+:root {
+  /* INPUT TEXT COLORS */
+  --input-text-bg-color: #fff;
+  --input-text-border-color-primary: #84888c;
+  --input-text-border-color-secondary: #fff;
+  --input-text-box-shadow-primary: #000;
+  --input-text-box-shadow-secondary: #c0c0c0;
+  --input-text-error-color: #d9534f;
+}

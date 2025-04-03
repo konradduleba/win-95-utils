@@ -1,0 +1,30 @@
+@use "@styles/mixins" as *;
+
+$padding: 4px;
+$font-size: 16px;
+$height: calc($font-size + $padding * 2);
+
+.input {
+  background-color: var(--input-text-bg-color);
+  padding: $padding;
+  font-size: $font-size;
+  line-height: calc($padding + $font-size);
+  height: $height;
+  outline: none;
+
+  @include assign-border-colors(
+    --input-text-border-color-primary,
+    --input-text-border-color-secondary
+  );
+
+  @include inset-box-shadow(
+    --input-text-box-shadow-primary,
+    --input-text-box-shadow-secondary
+  );
+}
+
+.invalid {
+  border-color: var(--input-text-error-color);
+
+  @include inset-box-shadow(--input-text-error-color, --input-text-error-color);
+}

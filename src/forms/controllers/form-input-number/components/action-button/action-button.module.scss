@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+  height: 9px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  font-size: 6px;
+}
+
+.increment {
+  transform: rotate(180deg);
+}

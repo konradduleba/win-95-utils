@@ -1,43 +1,33 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { configDefaults, defineConfig, mergeConfig } from "vitest/config";
+import { InlineConfig } from "vitest/node";
 
-import { defineConfig } from "vitest/config";
+import viteConfig from "./vite.config";
 
-import { storybookTest } from "@storybook/experimental-addon-test/vitest-plugin";
-
-const dirname =
-  typeof __dirname !== "undefined"
-    ? __dirname
-    : path.dirname(fileURLToPath(import.meta.url));
-
-// More info at: https://storybook.js.org/docs/writing-tests/test-addon
-export default defineConfig({
-  test: {
-    workspace: [
-      {
-        extends: true,
-        plugins: [
-          // The plugin will run tests for the stories defined in your Storybook config
-          // See options at: https://storybook.js.org/docs/writing-tests/test-addon#storybooktest
-          storybookTest({ configDir: path.join(dirname, ".storybook") }),
-        ],
-        test: {
-          name: "storybook",
-          browser: {
-            enabled: true,
-            headless: true,
-            name: "chromium",
-            provider: "playwright",
-          },
-          setupFiles: [".storybook/vitest.setup.ts"],
-        },
-      },
-    ],
-  },
-  resolve: {
-    alias: {
-      "@dlkn/win-95-utils/forms": "/src/forms/index.ts",
-      "@dlkn/win-95-utils/icons": "/src/icons/index.ts",
+const TEST_CONFIG: InlineConfig = {
+  globals: true,
+  environment: "jsdom",
+  setupFiles: "./config/jest/setup-files.ts",
+  exclude: [...configDefaults.exclude, "**/e2e/**"],
+  css: {
+    include: new RegExp(/.+/),
+    modules: {
+      classNameStrategy: "stable",
     },
   },
-});
+};
+
+const CSS_CONFIG = {
+  preprocessorOptions: {
+    scss: {
+      api: "modern-compiler",
+    },
+  },
+};
+
+export default mergeConfig(
+  viteConfig,
+  defineConfig({
+    test: TEST_CONFIG,
+    css: CSS_CONFIG,
+  })
+);

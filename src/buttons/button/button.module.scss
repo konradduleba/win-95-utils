@@ -1,0 +1,28 @@
+.button {
+  height: 100%;
+  background-color: var(--button-bg-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-left-top) var(--border-right-bottom)
+    var(--border-right-bottom) var(--border-left-top);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryButton {
+  &:focus {
+    box-shadow: 0 0 0 1px var(--button-outline-color);
+    outline: 1px dashed var(--button-outline-color);
+    outline-offset: -5px;
+  }
+
+  &:focus:active {
+    border-color: var(--border-active);
+    padding: 1px 0 0 1px;
+  }
+
+  &:disabled {
+    color: var(--button-disabled-color);
+  }
+}

@@ -1,2 +1,2 @@
-export * from "./forms";
-export * from "./icons";
+export * from "./buttons";
+export * from "./components/text-with-decorated-letter";

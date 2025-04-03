@@ -1,0 +1,9 @@
+.option {
+  padding: 0 2px;
+}
+
+.focused,
+.selected {
+  background-color: var(--focus-selected-bg-color);
+  color: var(--focus-selected-color);
+}

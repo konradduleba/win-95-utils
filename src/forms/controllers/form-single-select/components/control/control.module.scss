@@ -1,0 +1,12 @@
+.control {
+  background-color: var(--form-bg-color);
+  display: flex;
+  height: 20px;
+  padding-left: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--form-border-left-top) var(--form-border-bottom-right)
+    var(--form-border-bottom-right) var(--form-border-left-top);
+  box-shadow: inset 1px 1px 0 0 var(--form-box-shadow-top-left),
+    inset -1px -1px 0 0 var(--form-box-shadow-bottom-right);
+}
