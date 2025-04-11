@@ -1,3 +1,21 @@
+@mixin inset-box-shadow-on-right-and-bottom($color) {
+  $size: 1.5px;
+
+  border-width: $size;
+  border-style: solid;
+
+  box-shadow: inset (-$size) (-$size) 0 0 var(#{$color});
+}
+
+@mixin inset-box-shadow-on-left-and-top($color) {
+  $size: 1.5px;
+
+  border-width: $size;
+  border-style: solid;
+
+  box-shadow: inset $size $size 0 0 var(#{$color});
+}
+
 @mixin inset-box-shadow($color1, $color2) {
   $size: 1.5px;
 

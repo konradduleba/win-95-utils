@@ -6,4 +6,12 @@
   --input-text-box-shadow-primary: #000;
   --input-text-box-shadow-secondary: #c0c0c0;
   --input-text-error-color: #d9534f;
+
+  /* BUTTON COLORS */
+  --button-bg-color: #c0c0c0;
+  --button-outline-color: #000;
+  --button-disabled-color: #84888c;
+  --button-border-color-primary: #fff;
+  --button-border-color-secondary: #1d1b1b;
+  --button-border-color-tertiary: #84888c;
 }

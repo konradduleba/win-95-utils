@@ -1,7 +1,7 @@
 import { FC } from "react";
 
-import { FormTextInput } from "@forms/controllers";
 import { FormTextInputProps } from "@forms/controllers/form-text-input/types";
+import { FormTextInput } from "@forms/controllers/form-text-input/form-text-input";
 
 import { FormWrapper } from "../form-wrapper/form-wrapper";
 

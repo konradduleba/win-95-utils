@@ -1,25 +1,39 @@
+@use "@styles/mixins" as *;
+
 .button {
   height: 100%;
+  width: 100%;
+  min-height: 28px;
   background-color: var(--button-bg-color);
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--border-left-top) var(--border-right-bottom)
-    var(--border-right-bottom) var(--border-left-top);
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.categoryButton {
+  @include assign-border-colors(
+    --button-border-color-primary,
+    --button-border-color-secondary
+  );
+
+  @include inset-box-shadow-on-right-and-bottom(--button-border-color-tertiary);
+
   &:focus {
-    box-shadow: 0 0 0 1px var(--button-outline-color);
+    border-color: var(--button-border-color-secondary);
     outline: 1px dashed var(--button-outline-color);
-    outline-offset: -5px;
+    outline-offset: -6px;
+
+    @include inset-box-shadow(
+      --button-border-color-primary,
+      --button-border-color-secondary
+    );
   }
 
-  &:focus:active {
-    border-color: var(--border-active);
-    padding: 1px 0 0 1px;
+  &:active:not(:disabled) {
+    padding: 3px 0 0 3px;
+
+    @include inset-box-shadow(
+      --button-border-color-tertiary,
+      --button-border-color-tertiary
+    );
   }
 
   &:disabled {
