@@ -11,7 +11,9 @@ export type UseFocusOnKeyPressReturnProps<RefType> = {
 const isFocusable = (element: Element | null) => {
   if (!element) return false;
   return (
-    element instanceof HTMLInputElement || element instanceof HTMLButtonElement
+    element instanceof HTMLInputElement ||
+    element instanceof HTMLButtonElement ||
+    element instanceof HTMLLabelElement
   );
 };
 

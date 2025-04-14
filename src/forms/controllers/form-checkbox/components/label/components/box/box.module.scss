@@ -1,0 +1,39 @@
+@use "@styles/mixins" as *;
+
+$size: 18px;
+
+.box {
+  height: $size;
+  width: $size;
+  background-color: var(--input-checkbox-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include assign-border-colors(
+    --input-checkbox-border-color-primary,
+    --input-checkbox-border-color-secondary
+  );
+
+  @include inset-box-shadow(
+    --input-checkbox-box-shadow-primary,
+    --input-checkbox-box-shadow-secondary
+  );
+}
+
+.disabled {
+  background-color: var(--input-checkbox-disabled-color-secondary);
+}
+
+.invalid {
+  border-color: var(--input-checkbox-error-color);
+
+  @include inset-box-shadow(
+    --input-checkbox-error-color,
+    --input-checkbox-error-color
+  );
+}
+
+.icon {
+  font-size: 8px;
+}

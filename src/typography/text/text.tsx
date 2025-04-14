@@ -12,6 +12,7 @@ export type TextProps = {
   colorOption?: ColorOption;
   className?: string;
   role?: AriaRole;
+  testId?: string;
 };
 
 type SizeStyles = Record<Size, string>;
@@ -35,6 +36,7 @@ export const Text: FC<PropsWithChildren<TextProps>> = ({
   children,
   className,
   role,
+  testId,
 }) => {
   return (
     <span
@@ -45,6 +47,7 @@ export const Text: FC<PropsWithChildren<TextProps>> = ({
         className
       )}
       role={role}
+      data-testid={testId}
     >
       {children}
     </span>

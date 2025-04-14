@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import { Trans } from "@lingui/react";
 
-import { Button } from "@buttons/button";
+import { Button } from "@buttons/button/button";
 
 import { MESSAGES } from "./translations";
 

@@ -1,0 +1,9 @@
+.text {
+  outline: var(--text-outline);
+  padding: 1px 4px;
+}
+
+.disabled {
+  color: var(--input-checkbox-disabled-color-primary);
+  outline: none;
+}

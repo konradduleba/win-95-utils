@@ -1,60 +1,36 @@
-import { FC, KeyboardEvent, ReactNode } from "react";
-import { useController } from "react-hook-form";
+import { FC } from "react";
 
-import SvgCheck from "@icons/check";
+import { FormCheckboxContext } from "./form-checkbox.context";
 
-import { CHECKBOX_LABEL_TEST_ID, CHECKBOX_INPUT_TEST_ID } from "./constants";
+import { FormCheckboxContextProps, FormCheckboxProps } from "./types";
 
-import styles from "./form-checkbox.module.scss";
+import { Input, Label, Wrapper } from "./components";
 
-type FormCheckboxProps = {
-  testId: string;
-  name: string;
-  label: ReactNode;
-};
+import { useHandleValueChange } from "./hooks";
 
-export const FormCheckbox: FC<FormCheckboxProps> = ({
-  name,
-  label,
-  testId,
-}) => {
-  const { field } = useController({
-    name,
-  });
+export const FormCheckbox: FC<FormCheckboxProps> = (props) => {
+  const { name, disabled } = props;
 
-  const isChecked = field.value;
+  const { isInvalid, onHandleChange, isChecked, onKeyPress } =
+    useHandleValueChange({
+      name,
+      disabled,
+    });
 
-  const onKeyPress = (e: KeyboardEvent<HTMLLabelElement>) => {
-    if (e.key === " " || e.key === "Enter") {
-      e.preventDefault();
-      field.onChange(!isChecked);
-    }
+  const properties: FormCheckboxContextProps = {
+    isInvalid,
+    isChecked,
+    onHandleChange,
+    onKeyPress,
+    ...props,
   };
 
   return (
-    <div className={styles.formCheckbox} data-testid={testId}>
-      <input
-        {...field}
-        type="checkbox"
-        id={name}
-        className={styles.input}
-        checked={isChecked}
-        data-testid={CHECKBOX_INPUT_TEST_ID}
-      />
-      <label
-        htmlFor={name}
-        className={styles.label}
-        tabIndex={0}
-        role="checkbox"
-        aria-checked={isChecked}
-        onKeyDown={onKeyPress}
-        data-testid={CHECKBOX_LABEL_TEST_ID}
-      >
-        <div className={styles.box}>
-          {isChecked && <SvgCheck className={styles.icon} />}
-        </div>
-        {label}
-      </label>
-    </div>
+    <FormCheckboxContext.Provider value={properties}>
+      <Wrapper>
+        <Input />
+        <Label />
+      </Wrapper>
+    </FormCheckboxContext.Provider>
   );
 };

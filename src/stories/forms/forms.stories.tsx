@@ -5,7 +5,7 @@ import {
   LABEL_POSITIONS,
 } from "./components/text-input/mocks";
 
-import { TextInput } from "./components";
+import { Checkbox, TextInput } from "./components";
 
 const meta: Meta = {
   title: "Forms",
@@ -13,9 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-type Story = StoryObj<typeof TextInput>;
-
-export const TextInputStory: Story = {
+export const TextInputStory: StoryObj<typeof TextInput> = {
   name: "Text input",
   render: (args) => <TextInput {...args} />,
   args: {
@@ -41,5 +39,16 @@ export const TextInputStory: Story = {
         neq: "",
       },
     },
+  },
+};
+
+export const CheckboxStory: StoryObj<typeof Checkbox> = {
+  name: "Checkbox",
+  render: (args) => <Checkbox {...args} />,
+  args: {
+    label: "Example label",
+    triggerKeys: ["E", "e"],
+    disabled: false,
+    required: false,
   },
 };

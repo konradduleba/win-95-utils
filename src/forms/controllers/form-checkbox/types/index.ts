@@ -1,1 +1,5 @@
-export { type CheckboxTestProps } from "./test-types";
+export type {
+  FormCheckboxContextProps,
+  FormCheckboxProps,
+  InputHandlersProps,
+} from "./checkbox";

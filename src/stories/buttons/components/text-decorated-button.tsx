@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Button, type ButtonProps } from "@buttons/button";
+import { Button, type ButtonProps } from "@buttons/button/button";
 
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 

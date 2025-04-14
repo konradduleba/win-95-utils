@@ -7,6 +7,17 @@
   --input-text-box-shadow-secondary: #c0c0c0;
   --input-text-error-color: #d9534f;
 
+  /* CHECKBOX COLORS */
+  --input-checkbox-bg-color: #fff;
+  --input-checkbox-outline-color: #000;
+  --input-checkbox-border-color-primary: #84888c;
+  --input-checkbox-border-color-secondary: #fff;
+  --input-checkbox-box-shadow-primary: #000;
+  --input-checkbox-box-shadow-secondary: #c0c0c0;
+  --input-checkbox-error-color: #d9534f;
+  --input-checkbox-disabled-color-primary: #84888c;
+  --input-checkbox-disabled-color-secondary: #c0c0c0;
+
   /* BUTTON COLORS */
   --button-bg-color: #c0c0c0;
   --button-outline-color: #000;

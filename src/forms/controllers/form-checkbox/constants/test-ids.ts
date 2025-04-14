@@ -1,2 +1,3 @@
-export const CHECKBOX_LABEL_TEST_ID = "checkbox-label";
-export const CHECKBOX_INPUT_TEST_ID = "checkbox-input";
+export const CHECKBOX_TEST_ID = "checkbox";
+export const BOX_TEST_ID = "box";
+export const LABEL_TEST_ID = "label";
