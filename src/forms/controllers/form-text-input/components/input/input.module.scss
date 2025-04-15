@@ -12,6 +12,10 @@ $height: calc($font-size + $padding * 2);
   height: $height;
   outline: none;
 
+  &:disabled {
+    background-color: var(--input-text-disabled-color-secondary);
+  }
+
   @include assign-border-colors(
     --input-text-border-color-primary,
     --input-text-border-color-secondary

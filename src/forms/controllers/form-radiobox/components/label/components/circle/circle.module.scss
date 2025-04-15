@@ -1,0 +1,53 @@
+@use "@styles/mixins" as *;
+
+$size: 18px;
+$dot-size: 50%;
+
+@mixin common-circle-styles($circleSize, $backgroundColor) {
+  height: $circleSize;
+  width: $circleSize;
+  background-color: var(#{$backgroundColor});
+  border-radius: 50%;
+}
+
+@mixin create-circle($circleSize, $borderColorOne, $borderColorTwo) {
+  @include common-circle-styles($circleSize, --input-radiobox-bg-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include assign-border-colors($borderColorOne, $borderColorTwo);
+}
+
+.circle {
+  @include create-circle(
+    $size,
+    --input-radiobox-outside-circle-color-primary,
+    --input-radiobox-outside-circle-color-secondary
+  );
+}
+
+.secondCircle {
+  @include create-circle(
+    100%,
+    --input-radiobox-inside-circle-primary,
+    --input-radiobox-inside-circle-secondary
+  );
+}
+
+.dot {
+  @include common-circle-styles($dot-size, --input-radiobox-dot-bg-color);
+}
+
+.disabled {
+  background-color: var(--input-radiobx-disabled-color-secondary);
+}
+
+.invalid {
+  border-color: var(--input-radiobox-error-color);
+}
+
+.icon {
+  font-size: 8px;
+}

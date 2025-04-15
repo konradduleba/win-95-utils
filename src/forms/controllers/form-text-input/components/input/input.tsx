@@ -16,6 +16,7 @@ export const Input: FC = () => {
     autocompleteId,
     name,
     triggerKeys,
+    disabled,
   } = useFormTextInput();
   const { elementRef } = useFocusOnKeyPress<HTMLInputElement>({ triggerKeys });
 
@@ -27,6 +28,7 @@ export const Input: FC = () => {
       name={name}
       aria-label={name}
       value={value}
+      disabled={disabled}
       onChange={onHandleChange}
       className={cn(styles.input, { [styles.invalid]: isInvalid })}
       autoComplete={autocompleteId}

@@ -8,9 +8,9 @@ import { useFormTextInput } from "../../hooks";
 import styles from "./error-message.module.scss";
 
 export const ErrorMessage: FC = () => {
-  const { errorMessage } = useFormTextInput();
+  const { errorMessage, isInvalid } = useFormTextInput();
 
-  if (!errorMessage) {
+  if (!isInvalid || !errorMessage) {
     return null;
   }
 

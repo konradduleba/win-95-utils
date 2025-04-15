@@ -1,0 +1,13 @@
+.label {
+  --text-outline: none;
+
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  outline: none;
+  width: fit-content;
+
+  &:focus {
+    --text-outline: 1px dashed var(--input-radiobox-outline-color);
+  }
+}

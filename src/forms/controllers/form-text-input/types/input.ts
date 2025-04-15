@@ -12,6 +12,7 @@ export type FormTextInputProps = Partial<FormTextInputLabelProps> &
     name: string;
     isPassword?: boolean;
     autocompleteId?: HTMLInputAutoCompleteAttribute;
+    disabled?: boolean;
   };
 
 export type InputHandlersProps = {

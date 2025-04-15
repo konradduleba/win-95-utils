@@ -9,10 +9,10 @@ import { ErrorMessage, Input, Label, Wrapper } from "./components";
 import { useHandleValueChange } from "./hooks";
 
 export const FormTextInput: FC<FormTextInputProps> = (props) => {
-  const { name } = props;
+  const { name, disabled } = props;
 
   const { isInvalid, onHandleChange, value, errorMessage } =
-    useHandleValueChange({ name });
+    useHandleValueChange({ name, disabled });
 
   const properties: FormTextInputContextProps = {
     isInvalid,

@@ -5,7 +5,9 @@ import {
   LABEL_POSITIONS,
 } from "./components/text-input/mocks";
 
-import { Checkbox, TextInput } from "./components";
+import { Checkbox, Radiobox, TextInput } from "./components";
+
+import { RADIOBOX_OPTIONS } from "./components/radiobox/mocks";
 
 const meta: Meta = {
   title: "Forms",
@@ -21,6 +23,7 @@ export const TextInputStory: StoryObj<typeof TextInput> = {
     isPassword: false,
     autocompleteId: "off",
     triggerKeys: ["E", "e"],
+    disabled: false,
   },
   argTypes: {
     autocompleteId: {
@@ -50,5 +53,20 @@ export const CheckboxStory: StoryObj<typeof Checkbox> = {
     triggerKeys: ["E", "e"],
     disabled: false,
     required: false,
+  },
+};
+
+export const RadioboxStory: StoryObj<typeof Radiobox> = {
+  name: "Radiobox",
+  render: (args) => <Radiobox {...args} />,
+  args: {
+    options: RADIOBOX_OPTIONS,
+    initialValue: undefined,
+  },
+  argTypes: {
+    initialValue: {
+      control: "select",
+      options: RADIOBOX_OPTIONS.map(({ value }) => value),
+    },
   },
 };

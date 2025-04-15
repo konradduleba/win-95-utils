@@ -6,6 +6,8 @@
   --input-text-box-shadow-primary: #000;
   --input-text-box-shadow-secondary: #c0c0c0;
   --input-text-error-color: #d9534f;
+  --input-text-disabled-color-primary: #84888c;
+  --input-text-disabled-color-secondary: #c0c0c0;
 
   /* CHECKBOX COLORS */
   --input-checkbox-bg-color: #fff;
@@ -17,6 +19,18 @@
   --input-checkbox-error-color: #d9534f;
   --input-checkbox-disabled-color-primary: #84888c;
   --input-checkbox-disabled-color-secondary: #c0c0c0;
+
+  /* RADIOBOX COLORS */
+  --input-radiobox-bg-color: #fff;
+  --input-radiobox-dot-bg-color: #000;
+  --input-radiobox-outline-color: #000;
+  --input-radiobox-outside-circle-color-primary: #84888c;
+  --input-radiobox-outside-circle-color-secondary: #fff;
+  --input-radiobox-inside-circle-primary: #000;
+  --input-radiobox-inside-circle-secondary: #c0c0c0;
+  --input-radiobox-error-color: #d9534f;
+  --input-radiobox-disabled-color-primary: #84888c;
+  --input-radiobox-disabled-color-secondary: #c0c0c0;
 
   /* BUTTON COLORS */
   --button-bg-color: #c0c0c0;

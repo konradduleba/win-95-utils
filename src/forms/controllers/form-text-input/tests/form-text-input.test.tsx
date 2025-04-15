@@ -15,6 +15,7 @@ import {
 import {
   WithAutoComplete,
   WithCustomErrorMessage,
+  WithDisabled,
   WithLabel,
   WithoutLabel,
   WithPassword,
@@ -102,5 +103,11 @@ describe("Test coverage for Form Text Input", () => {
     const { input } = await renderTextInput(<WithLabel />);
 
     await input.triggerFocusViaKey();
+  });
+
+  test("Should be disabled", async () => {
+    const { input } = await renderTextInput(<WithDisabled />);
+
+    expect(input.input).toBeDisabled();
   });
 });

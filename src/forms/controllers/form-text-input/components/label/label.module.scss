@@ -1,3 +1,7 @@
 .label {
   width: fit-content;
 }
+
+.disabled {
+  color: var(--input-text-disabled-color-primary);
+}

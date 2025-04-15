@@ -1,4 +1,5 @@
 import { FC } from "react";
+import cn from "classnames";
 
 import { Text } from "@typography/text";
 
@@ -9,7 +10,7 @@ import { useFormTextInput } from "../../hooks";
 import styles from "./label.module.scss";
 
 export const Label: FC = () => {
-  const { label, name, triggerKeys } = useFormTextInput();
+  const { label, name, triggerKeys, disabled } = useFormTextInput();
 
   if (!label) {
     return null;
@@ -21,7 +22,7 @@ export const Label: FC = () => {
 
   return (
     <label htmlFor={name} className={styles.label}>
-      <Text size="md">
+      <Text size="md" className={cn({ [styles.disabled]: disabled })}>
         <TextWithDecoratedLetter
           text={label}
           letter={decoratedLetter}
