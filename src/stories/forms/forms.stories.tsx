@@ -4,10 +4,10 @@ import {
   AUTO_COMPLETE_OPTIONS,
   LABEL_POSITIONS,
 } from "./components/text-input/mocks";
-
-import { Checkbox, Radiobox, TextInput } from "./components";
-
 import { RADIOBOX_OPTIONS } from "./components/radiobox/mocks";
+import { SINGLE_SELECT_OPTIONS } from "./components/single-select/mocks";
+
+import { Checkbox, Radiobox, SingleSelect, TextInput } from "./components";
 
 const meta: Meta = {
   title: "Forms",
@@ -68,5 +68,15 @@ export const RadioboxStory: StoryObj<typeof Radiobox> = {
       control: "select",
       options: RADIOBOX_OPTIONS.map(({ value }) => value),
     },
+  },
+};
+
+export const SingleSelectStory: StoryObj<typeof SingleSelect> = {
+  name: "Single Select",
+  render: (args) => <SingleSelect {...args} />,
+  args: {
+    options: SINGLE_SELECT_OPTIONS,
+    disabled: false,
+    placeholder: "Placeholder",
   },
 };

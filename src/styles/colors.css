@@ -32,6 +32,36 @@
   --input-radiobox-disabled-color-primary: #84888c;
   --input-radiobox-disabled-color-secondary: #c0c0c0;
 
+  /* SINGLE SELECT COLORS */
+  --single-select-bg-color: #fff;
+  --single-select-border-color-primary: #84888c;
+  --single-select-border-color-secondary: #fff;
+  --single-select-box-shadow-primary: #000;
+  --single-select-box-shadow-secondary: #c0c0c0;
+  --single-select-disabled-color-primary: #84888c;
+  --single-select-disabled-color-secondary: #c0c0c0;
+  --single-select-error-color: #d9534f;
+  --single-select-placeholder-color: #c0c0c0;
+  --single-select-outline-color-primary: #000;
+  --single-select-outline-color-secondary: #fff;
+  --single-select-outline-bg-color: #000080;
+  --single-select-outline-text-color: #fff;
+
+  /* SINGLE SELECT DROPDOWN INDICATOR COLORS */
+  --single-select-dropdown-indicator-border-color-primary: #c0c0c0;
+  --single-select-dropdown-indicator-border-color-secondary: #000;
+  --single-select-dropdown-indicator-box-shadow-primary: #fff;
+  --single-select-dropdown-indicator-box-shadow-secondary: #84888c;
+  --single-select-dropdown-indicator-disabled-primary: #84888c;
+
+  /* SINGLE SELECT DROPDOWN MENU LIST COLORS */
+  --single-select-dropdown-menu-list-bg-color: #fff;
+  --single-select-dropdown-menu-list-border-color: #000;
+
+  /* SINGLE SELECT DROPDOWN MENU OPTION COLORS */
+  --single-select-dropdown-menu-option-selected-bg-color: #000080;
+  --single-select-dropdown-menu-option-selected-text-color: #fff;
+
   /* BUTTON COLORS */
   --button-bg-color: #c0c0c0;
   --button-outline-color: #000;
@@ -39,4 +69,7 @@
   --button-border-color-primary: #fff;
   --button-border-color-secondary: #1d1b1b;
   --button-border-color-tertiary: #84888c;
+
+  /* SCROLLBAR COLORS */
+  --scrollbar-thumb-bg-color-primary: #c0c0c0;
 }

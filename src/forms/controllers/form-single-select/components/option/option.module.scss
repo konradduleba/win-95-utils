@@ -4,6 +4,6 @@
 
 .focused,
 .selected {
-  background-color: var(--focus-selected-bg-color);
-  color: var(--focus-selected-color);
+  background-color: var(--single-select-dropdown-menu-option-selected-bg-color);
+  color: var(--single-select-dropdown-menu-option-selected-text-color);
 }

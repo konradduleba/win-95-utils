@@ -1,5 +1,6 @@
-.menu {
-  border: 1px solid var(--select-menu-border-color);
+.menuWrapper {
+  border: 1px solid var(--single-select-dropdown-menu-list-border-color);
+  background-color: var(--single-select-dropdown-menu-list-bg-color);
   max-height: 200px;
   overflow-y: auto;
 }

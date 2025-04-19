@@ -1,0 +1,11 @@
+.text {
+  padding-left: 4px;
+  width: 100%;
+
+  &:focus {
+    outline: 1px dashed var(--single-select-outline-color-secondary);
+    outline-offset: -1.5px;
+    color: var(--single-select-outline-text-color);
+    background-color: var(--single-select-outline-bg-color);
+  }
+}

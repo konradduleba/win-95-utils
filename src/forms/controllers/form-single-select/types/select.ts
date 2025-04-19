@@ -1,15 +1,16 @@
-import { ReactNode } from "react";
-
 export type SelectOption = {
   value: number | string;
-  label: ReactNode;
+  label: string;
 };
 
 export type FormSingleSelectProps = {
+  name: string;
   options: SelectOption[];
   className?: string;
-  name: string;
-  isRequired?: boolean;
-  placeholder?: ReactNode;
-  testId: string;
+  placeholder?: string;
+  disabled?: boolean;
+};
+
+export type FormSingleSelectContextProps = {
+  isInvalid: boolean;
 };

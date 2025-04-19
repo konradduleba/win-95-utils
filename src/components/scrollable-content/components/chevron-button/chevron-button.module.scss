@@ -4,3 +4,7 @@ $chevron-size: 8px;
   width: $chevron-size;
   height: $chevron-size;
 }
+
+.rotated {
+  transform: rotate(180deg);
+}

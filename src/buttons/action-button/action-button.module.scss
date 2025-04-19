@@ -1,0 +1,39 @@
+@use "@styles/mixins" as *;
+
+$button-size: 18px;
+
+.button {
+  min-height: $button-size;
+  min-width: $button-size;
+  width: $button-size;
+  height: $button-size;
+
+  @include assign-border-colors(
+    --single-select-dropdown-indicator-border-color-primary,
+    --single-select-dropdown-indicator-border-color-secondary
+  );
+
+  @include inset-box-shadow(
+    --single-select-dropdown-indicator-box-shadow-primary,
+    --single-select-dropdown-indicator-box-shadow-secondary
+  );
+
+  &:disabled {
+    svg {
+      fill: var(--single-select-dropdown-indicator-disabled-primary);
+    }
+  }
+
+  &:active:not(:disabled) {
+    padding: 2px 0 0 2px;
+
+    @include assign-border-colors(
+      --single-select-dropdown-indicator-box-shadow-secondary,
+      --single-select-dropdown-indicator-box-shadow-secondary
+    );
+    @include inset-box-shadow(
+      --single-select-dropdown-indicator-border-color-primary,
+      --single-select-dropdown-indicator-border-color-primary
+    );
+  }
+}

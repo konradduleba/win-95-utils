@@ -1,24 +1,27 @@
 import { FC } from "react";
+import cn from "classnames";
 import { ControlProps } from "react-select";
 
-import { FormSingleSelectProps } from "../../types";
+import { useFormSingleSelect } from "../../hooks";
 
 import styles from "./control.module.scss";
 
-type ControlProperties = ControlProps & Pick<FormSingleSelectProps, "testId">;
-
-export const Control: FC<ControlProperties> = ({
+export const Control: FC<ControlProps> = ({
   children,
   innerProps,
   innerRef,
-  testId,
+  isDisabled,
 }) => {
+  const { isInvalid } = useFormSingleSelect();
+
   return (
     <div
       ref={innerRef}
       {...innerProps}
-      className={styles.control}
-      data-testid={testId}
+      className={cn(styles.control, {
+        [styles.disabled]: isDisabled,
+        [styles.invalid]: isInvalid,
+      })}
     >
       {children}
     </div>

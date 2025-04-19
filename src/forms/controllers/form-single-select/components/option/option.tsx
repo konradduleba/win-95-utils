@@ -2,9 +2,7 @@ import { FC } from "react";
 import { OptionProps } from "react-select";
 import cn from "classnames";
 
-import { Text } from "@typography/text";
-
-import { SELECT_OPTION_TEST_ID } from "../../constants";
+import { Text } from "@typography/text/text";
 
 import styles from "./option.module.scss";
 
@@ -16,16 +14,15 @@ export const Option: FC<OptionProps> = ({
   isFocused,
 }) => {
   return (
-    <div ref={innerRef} {...innerProps} data-testid={SELECT_OPTION_TEST_ID}>
-      <Text
-        size="sm"
-        className={cn(styles.option, {
-          [styles.focused]: isFocused,
-          [styles.selected]: isSelected,
-        })}
-      >
-        {label}
-      </Text>
+    <div
+      ref={innerRef}
+      {...innerProps}
+      className={cn(styles.option, {
+        [styles.focused]: isFocused,
+        [styles.selected]: isSelected && isFocused,
+      })}
+    >
+      <Text size="md">{label}</Text>
     </div>
   );
 };

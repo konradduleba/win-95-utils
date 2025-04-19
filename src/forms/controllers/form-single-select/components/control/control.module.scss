@@ -1,12 +1,38 @@
+@use "@styles/mixins" as *;
+
+$height: 24px;
+$line-height: 20px;
+$padding-right: 1.5px;
+
 .control {
-  background-color: var(--form-bg-color);
+  background-color: var(--single-select-bg-color);
+  line-height: $line-height;
+  height: $height;
   display: flex;
-  height: 20px;
-  padding-left: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--form-border-left-top) var(--form-border-bottom-right)
-    var(--form-border-bottom-right) var(--form-border-left-top);
-  box-shadow: inset 1px 1px 0 0 var(--form-box-shadow-top-left),
-    inset -1px -1px 0 0 var(--form-box-shadow-bottom-right);
+  align-items: center;
+  padding-right: $padding-right;
+
+  @include assign-border-colors(
+    --single-select-border-color-primary,
+    --single-select-border-color-secondary
+  );
+
+  @include inset-box-shadow(
+    --single-select-box-shadow-primary,
+    --single-select-box-shadow-secondary
+  );
+}
+
+.invalid {
+  border-color: var(--single-select-error-color);
+
+  @include inset-box-shadow(
+    --single-select-error-color,
+    --single-select-error-color
+  );
+}
+
+.disabled {
+  background-color: var(--single-select-disabled-color-secondary);
+  color: var(--single-select-disabled-color-primary);
 }
