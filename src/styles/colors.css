@@ -72,4 +72,8 @@
 
   /* SCROLLBAR COLORS */
   --scrollbar-thumb-bg-color-primary: #c0c0c0;
+  --scrollbar-thumb-border-color-primary: #c0c0c0;
+  --scrollbar-thumb-border-color-secondary: #000;
+  --scrollbar-thumb-box-shadow-primary: #fff;
+  --scrollbar-thumb-box-shadow-secondary: #84888c;
 }

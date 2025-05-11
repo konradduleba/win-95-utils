@@ -1,6 +1,10 @@
 import { useController } from "react-hook-form";
 
-import { FormSingleSelectProps, SelectOption } from "../types";
+import {
+  FormSingleSelectProps,
+  SelectHandlersProps,
+  SelectOption,
+} from "../types";
 
 type UseHandleValueChangeProps = Pick<
   FormSingleSelectProps,
@@ -10,20 +14,25 @@ type UseHandleValueChangeProps = Pick<
 export const useHandleValueChange = ({
   name,
   options,
-}: UseHandleValueChangeProps) => {
+}: UseHandleValueChangeProps): SelectHandlersProps => {
   const { field, fieldState } = useController({
     name,
   });
 
-  const onChange = ({ value }: SelectOption) => {
-    field.onChange(value);
+  const onHandleChange = (selectedValue: unknown) => {
+    if (selectedValue) {
+      const { value } = selectedValue as SelectOption;
+      return field.onChange(value);
+    }
+
+    field.onChange("");
   };
 
   const value = options.find((option) => option.value === field.value);
 
   return {
     isInvalid: fieldState.invalid,
-    onChange,
+    onHandleChange,
     value,
   };
 };

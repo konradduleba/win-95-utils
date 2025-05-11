@@ -1,27 +1,41 @@
-import { FC, HTMLAttributes, PropsWithChildren, Ref, useRef } from "react";
-import cn from "classnames";
+import { FC, PropsWithChildren } from "react";
 
-import { Scrollbars } from "react-custom-scrollbars-2";
+import { ButtonDown, ButtonUp, Scroll, ScrollWrapper } from "./components";
 
-import { ChevronButton } from "./components";
+import { useGetIsScrollVisible, useScrollableHandlers } from "./hooks";
 
-import styles from "./scrollable-content.module.scss";
+import { ScrollableContentContextProps, ScrollableContentProps } from "./types";
 
-export type ScrollableContentProps = PropsWithChildren<
-  HTMLAttributes<HTMLDivElement>
-> & {
-  wrapperRef?: Ref<HTMLDivElement>;
-};
+import { ScrollableContentContext } from "./scrollable-content.context";
 
-export const ScrollableContent: FC<ScrollableContentProps> = ({
-  children,
-  className,
-  wrapperRef,
-  ...rest
-}) => {
+export const ScrollableContent: FC<
+  PropsWithChildren<ScrollableContentProps>
+> = ({ children, wrapperProps, wrapperRef, scrollStep, customHeight }) => {
+  const { scrollRef, onClickUp, onClickDown, onHandleScroll } =
+    useScrollableHandlers({ scrollStep });
+  const { childrenRef, scrollHeight, isVisible } = useGetIsScrollVisible({
+    customHeight,
+  });
+
+  const properties: ScrollableContentContextProps = {
+    onClickDown,
+    onClickUp,
+    onHandleScroll,
+    scrollRef,
+    wrapperProps,
+    wrapperRef,
+    childrenRef,
+    scrollHeight,
+    isVisible,
+  };
+
   return (
-    <div {...rest} ref={wrapperRef} className={styles.wrapper}>
-      <Scrollbars className={className}>{children}</Scrollbars>
-    </div>
+    <ScrollableContentContext.Provider value={properties}>
+      <ScrollWrapper>
+        {isVisible && <ButtonDown />}
+        <Scroll>{children}</Scroll>
+        {isVisible && <ButtonUp />}
+      </ScrollWrapper>
+    </ScrollableContentContext.Provider>
   );
 };

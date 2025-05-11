@@ -32,6 +32,7 @@
     "lodash.noop": "^3.0.1",
     "normalize.css": "8.0.1",
     "react-hook-form": "^7.55.0",
+    "react-scrollbars-custom": "^4.1.1",
     "react-select": "^5.10.1",
     "vite-tsconfig-paths": "^5.0.1",
     "yup": "1.4.0",

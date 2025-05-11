@@ -8,3 +8,18 @@ $chevron-size: 8px;
 .rotated {
   transform: rotate(180deg);
 }
+
+.top,
+.bottom {
+  position: absolute;
+  z-index: 1;
+  right: var(--border-size, 0);
+}
+
+.top {
+  top: var(--border-size, 0);
+}
+
+.bottom {
+  bottom: var(--border-size, 0);
+}

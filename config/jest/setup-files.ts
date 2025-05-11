@@ -2,7 +2,14 @@ import "vitest-canvas-mock";
 import "@testing-library/jest-dom";
 import "dotenv/config";
 
-import { getBoundingClientRectMock, HTMLElementOffsets } from "./mocks";
+import {
+  mockGetBoundingClientRect,
+  mockHTMLElementOffsets,
+  mockResizeObserver,
+  mockScrollIntoView,
+} from "./mocks";
 
-getBoundingClientRectMock();
-HTMLElementOffsets();
+mockGetBoundingClientRect();
+mockHTMLElementOffsets();
+mockResizeObserver();
+mockScrollIntoView();

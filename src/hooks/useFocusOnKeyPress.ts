@@ -13,7 +13,8 @@ const isFocusable = (element: Element | null) => {
   return (
     element instanceof HTMLInputElement ||
     element instanceof HTMLButtonElement ||
-    element instanceof HTMLLabelElement
+    element instanceof HTMLLabelElement ||
+    element instanceof HTMLDivElement
   );
 };
 

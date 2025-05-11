@@ -1,0 +1,17 @@
+@use "@styles/mixins" as *;
+
+.thumb {
+  border-radius: unset !important;
+  cursor: default !important;
+  background-color: var(--scrollbar-thumb-bg-color-primary) !important;
+
+  @include assign-border-colors(
+    --scrollbar-thumb-border-color-primary,
+    --scrollbar-thumb-border-color-secondary
+  );
+
+  @include inset-box-shadow(
+    --scrollbar-thumb-box-shadow-primary,
+    --scrollbar-thumb-box-shadow-secondary
+  );
+}

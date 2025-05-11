@@ -1,6 +1,8 @@
 @use "@styles/mixins" as *;
 
 .button {
+  --button-outline-offset: -6px;
+
   height: 100%;
   width: 100%;
   min-height: 28px;
@@ -19,7 +21,7 @@
   &:focus {
     border-color: var(--button-border-color-secondary);
     outline: 1px dashed var(--button-outline-color);
-    outline-offset: -6px;
+    outline-offset: var(--button-outline-offset);
 
     @include inset-box-shadow(
       --button-border-color-primary,

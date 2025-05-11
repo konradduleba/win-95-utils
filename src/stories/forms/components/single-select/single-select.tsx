@@ -10,8 +10,9 @@ import {
   getFormDefaultValues,
   singleSelectValidationSchema,
 } from "./utils";
+import { SINGLE_SELECT_OPTIONS } from "./mocks";
 
-type SingleSelectProps = Omit<FormSingleSelectProps, "name">;
+type SingleSelectProps = Omit<FormSingleSelectProps, "name" | "options">;
 
 export const SingleSelect: FC<SingleSelectProps> = (props) => {
   const defaultValues = getFormDefaultValues();
@@ -21,7 +22,11 @@ export const SingleSelect: FC<SingleSelectProps> = (props) => {
       defaultValues={defaultValues}
       validationSchema={singleSelectValidationSchema}
     >
-      <FormSingleSelect name={SINGLE_SELECT_KEYS.single_select} {...props} />
+      <FormSingleSelect
+        options={SINGLE_SELECT_OPTIONS}
+        name={SINGLE_SELECT_KEYS.single_select}
+        {...props}
+      />
     </FormWrapper>
   );
 };

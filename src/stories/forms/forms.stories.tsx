@@ -5,7 +5,6 @@ import {
   LABEL_POSITIONS,
 } from "./components/text-input/mocks";
 import { RADIOBOX_OPTIONS } from "./components/radiobox/mocks";
-import { SINGLE_SELECT_OPTIONS } from "./components/single-select/mocks";
 
 import { Checkbox, Radiobox, SingleSelect, TextInput } from "./components";
 
@@ -75,8 +74,11 @@ export const SingleSelectStory: StoryObj<typeof SingleSelect> = {
   name: "Single Select",
   render: (args) => <SingleSelect {...args} />,
   args: {
-    options: SINGLE_SELECT_OPTIONS,
     disabled: false,
     placeholder: "Placeholder",
+    triggerKeys: ["E", "e"],
+    label: "Example label",
+    isClearable: false,
+    isMenuOpen: false,
   },
 };

@@ -7,6 +7,7 @@ $button-size: 18px;
   min-width: $button-size;
   width: $button-size;
   height: $button-size;
+  outline: none !important;
 
   @include assign-border-colors(
     --single-select-dropdown-indicator-border-color-primary,
