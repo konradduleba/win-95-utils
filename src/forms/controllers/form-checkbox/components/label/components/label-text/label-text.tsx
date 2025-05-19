@@ -20,7 +20,7 @@ export const LabelText: FC = () => {
       className={cn(styles.text, {
         [styles.disabled]: disabled,
       })}
-      data-testId={LABEL_TEST_ID}
+      data-testid={LABEL_TEST_ID}
     >
       <TextWithDecoratedLetter
         text={label}
