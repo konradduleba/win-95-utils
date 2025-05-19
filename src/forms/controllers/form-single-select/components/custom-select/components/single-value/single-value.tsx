@@ -2,7 +2,7 @@ import { FC } from "react";
 import cn from "classnames";
 import { SingleValueProps } from "react-select";
 
-import { Text } from "@typography/text/text";
+import { Typography } from "@typography/typography";
 
 import { useFocusOnKeyPress } from "@hooks/useFocusOnKeyPress";
 
@@ -33,7 +33,7 @@ export const SingleValue: FC<SingleValueProps> = ({
       ref={elementRef}
       data-testid={SINGLE_SELECT_VALUE}
     >
-      <Text size="md">{label}</Text>
+      <Typography variant="span">{label}</Typography>
     </div>
   );
 };

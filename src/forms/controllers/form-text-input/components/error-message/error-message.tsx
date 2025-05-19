@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Trans } from "@lingui/react";
 
-import { Text } from "@typography/text";
+import { Typography } from "@typography/typography";
 
 import { useFormTextInput } from "../../hooks";
 
@@ -15,8 +15,8 @@ export const ErrorMessage: FC = () => {
   }
 
   return (
-    <Text size="sm" className={styles.error} role="alert">
+    <Typography size="sm" className={styles.error} variant="span" role="alert">
       <Trans id={errorMessage} />
-    </Text>
+    </Typography>
   );
 };

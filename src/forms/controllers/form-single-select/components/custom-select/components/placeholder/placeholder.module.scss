@@ -1,10 +1,10 @@
 .placeholder {
   padding-left: 4px;
-  color: var(--single-select-placeholder-color);
+  color: var(--system-placeholder-01);
   width: 100%;
 
   &:focus {
-    outline: 1px dashed var(--single-select-outline-color-primary);
+    outline: 1px dashed var(--system-outline-01);
     outline-offset: -3px;
   }
 }

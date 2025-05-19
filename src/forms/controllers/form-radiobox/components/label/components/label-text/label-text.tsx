@@ -3,8 +3,6 @@ import cn from "classnames";
 
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 
-import { Text } from "@typography/text";
-
 import { useFormRadiobox } from "../../../../hooks/useFormRadiobox";
 
 import styles from "./label-text.module.scss";
@@ -17,8 +15,7 @@ export const LabelText: FC = () => {
     : triggerKeys;
 
   return (
-    <Text
-      size="md"
+    <div
       className={cn(styles.text, {
         [styles.disabled]: disabled,
       })}
@@ -28,6 +25,6 @@ export const LabelText: FC = () => {
         letter={decoratedLetter}
         textDecoration="underline"
       />
-    </Text>
+    </div>
   );
 };

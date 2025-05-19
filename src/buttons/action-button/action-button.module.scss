@@ -9,19 +9,13 @@ $button-size: 18px;
   height: $button-size;
   outline: none !important;
 
-  @include assign-border-colors(
-    --single-select-dropdown-indicator-border-color-primary,
-    --single-select-dropdown-indicator-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-05, --system-border-03);
 
-  @include inset-box-shadow(
-    --single-select-dropdown-indicator-box-shadow-primary,
-    --single-select-dropdown-indicator-box-shadow-secondary
-  );
+  @include inset-box-shadow(--system-box-shadow-03, --system-box-shadow-04);
 
   &:disabled {
     svg {
-      fill: var(--single-select-dropdown-indicator-disabled-primary);
+      fill: var(--system-disabled-01);
     }
   }
 
@@ -29,12 +23,9 @@ $button-size: 18px;
     padding: 2px 0 0 2px;
 
     @include assign-border-colors(
-      --single-select-dropdown-indicator-box-shadow-secondary,
-      --single-select-dropdown-indicator-box-shadow-secondary
+      --system-box-shadow-04,
+      --system-box-shadow-04
     );
-    @include inset-box-shadow(
-      --single-select-dropdown-indicator-border-color-primary,
-      --single-select-dropdown-indicator-border-color-primary
-    );
+    @include inset-box-shadow(--system-border-05, --system-border-05);
   }
 }

@@ -1,0 +1,23 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Canvas,
+  Unstyled,
+} from "@storybook/blocks";
+
+import { TYPOGRAPHY_VARIANTS, HEADINGS } from "./mocks";
+
+import { Row, Heading } from "./components";
+
+<Meta title="System/Typography" />
+
+# Typography
+
+<Unstyled>
+  <Heading headings={HEADINGS} />
+  {TYPOGRAPHY_VARIANTS.map(({ variant, sizes, weights }) => (
+    <Row key={variant} variant={variant} sizes={sizes} weights={weights} />
+  ))}
+</Unstyled>

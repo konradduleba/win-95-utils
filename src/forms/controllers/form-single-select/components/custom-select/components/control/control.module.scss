@@ -5,34 +5,25 @@ $line-height: 20px;
 $padding-right: 1.5px;
 
 .control {
-  background-color: var(--single-select-bg-color);
+  background-color: var(--system-bg-01);
   line-height: $line-height;
   height: $height;
   display: flex;
   align-items: center;
   padding-right: $padding-right;
 
-  @include assign-border-colors(
-    --single-select-border-color-primary,
-    --single-select-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-01, --system-border-02);
 
-  @include inset-box-shadow(
-    --single-select-box-shadow-primary,
-    --single-select-box-shadow-secondary
-  );
+  @include inset-box-shadow(--system-box-shadow-01, --system-box-shadow-02);
 }
 
 .invalid {
-  border-color: var(--single-select-error-color);
+  border-color: var(--system-error-01);
 
-  @include inset-box-shadow(
-    --single-select-error-color,
-    --single-select-error-color
-  );
+  @include inset-box-shadow(--system-error-01, --system-error-01);
 }
 
 .disabled {
-  background-color: var(--single-select-disabled-color-secondary);
-  color: var(--single-select-disabled-color-primary);
+  background-color: var(--system-disabled-02);
+  color: var(--system-disabled-01);
 }

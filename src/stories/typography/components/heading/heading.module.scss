@@ -1,0 +1,6 @@
+.heading {
+  display: grid;
+  padding: 16px 0;
+  grid-template-columns: 250px 250px 250px;
+  border-bottom: 1px solid var(--system-border-01);
+}

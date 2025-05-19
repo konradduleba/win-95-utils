@@ -11,7 +11,7 @@ $dot-size: 50%;
 }
 
 @mixin create-circle($circleSize, $borderColorOne, $borderColorTwo) {
-  @include common-circle-styles($circleSize, --input-radiobox-bg-color);
+  @include common-circle-styles($circleSize, --system-bg-01);
 
   display: flex;
   align-items: center;
@@ -21,23 +21,15 @@ $dot-size: 50%;
 }
 
 .circle {
-  @include create-circle(
-    $size,
-    --input-radiobox-outside-circle-color-primary,
-    --input-radiobox-outside-circle-color-secondary
-  );
+  @include create-circle($size, --system-border-01, --system-border-02);
 }
 
 .secondCircle {
-  @include create-circle(
-    100%,
-    --input-radiobox-inside-circle-primary,
-    --input-radiobox-inside-circle-secondary
-  );
+  @include create-circle(100%, --system-border-03, --system-border-05);
 }
 
 .dot {
-  @include common-circle-styles($dot-size, --input-radiobox-dot-bg-color);
+  @include common-circle-styles($dot-size, --system-bg-02);
 }
 
 .disabled {
@@ -45,7 +37,7 @@ $dot-size: 50%;
 }
 
 .invalid {
-  border-color: var(--input-radiobox-error-color);
+  border-color: var(--system-error-01);
 }
 
 .icon {

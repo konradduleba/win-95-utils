@@ -3,8 +3,6 @@ import cn from "classnames";
 
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 
-import { Text } from "@typography/text";
-
 import { useFormCheckbox } from "../../../../hooks/useFormCheckbox";
 import { LABEL_TEST_ID } from "../../../../constants";
 
@@ -18,18 +16,17 @@ export const LabelText: FC = () => {
     : triggerKeys;
 
   return (
-    <Text
-      size="md"
+    <div
       className={cn(styles.text, {
         [styles.disabled]: disabled,
       })}
-      testId={LABEL_TEST_ID}
+      data-testId={LABEL_TEST_ID}
     >
       <TextWithDecoratedLetter
         text={label}
         letter={decoratedLetter}
         textDecoration="underline"
       />
-    </Text>
+    </div>
   );
 };

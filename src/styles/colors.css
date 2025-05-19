@@ -1,79 +1,23 @@
 :root {
-  /* INPUT TEXT COLORS */
-  --input-text-bg-color: #fff;
-  --input-text-border-color-primary: #84888c;
-  --input-text-border-color-secondary: #fff;
-  --input-text-box-shadow-primary: #000;
-  --input-text-box-shadow-secondary: #c0c0c0;
-  --input-text-error-color: #d9534f;
-  --input-text-disabled-color-primary: #84888c;
-  --input-text-disabled-color-secondary: #c0c0c0;
-
-  /* CHECKBOX COLORS */
-  --input-checkbox-bg-color: #fff;
-  --input-checkbox-outline-color: #000;
-  --input-checkbox-border-color-primary: #84888c;
-  --input-checkbox-border-color-secondary: #fff;
-  --input-checkbox-box-shadow-primary: #000;
-  --input-checkbox-box-shadow-secondary: #c0c0c0;
-  --input-checkbox-error-color: #d9534f;
-  --input-checkbox-disabled-color-primary: #84888c;
-  --input-checkbox-disabled-color-secondary: #c0c0c0;
-
-  /* RADIOBOX COLORS */
-  --input-radiobox-bg-color: #fff;
-  --input-radiobox-dot-bg-color: #000;
-  --input-radiobox-outline-color: #000;
-  --input-radiobox-outside-circle-color-primary: #84888c;
-  --input-radiobox-outside-circle-color-secondary: #fff;
-  --input-radiobox-inside-circle-primary: #000;
-  --input-radiobox-inside-circle-secondary: #c0c0c0;
-  --input-radiobox-error-color: #d9534f;
-  --input-radiobox-disabled-color-primary: #84888c;
-  --input-radiobox-disabled-color-secondary: #c0c0c0;
-
-  /* SINGLE SELECT COLORS */
-  --single-select-bg-color: #fff;
-  --single-select-border-color-primary: #84888c;
-  --single-select-border-color-secondary: #fff;
-  --single-select-box-shadow-primary: #000;
-  --single-select-box-shadow-secondary: #c0c0c0;
-  --single-select-disabled-color-primary: #84888c;
-  --single-select-disabled-color-secondary: #c0c0c0;
-  --single-select-error-color: #d9534f;
-  --single-select-placeholder-color: #c0c0c0;
-  --single-select-outline-color-primary: #000;
-  --single-select-outline-color-secondary: #fff;
-  --single-select-outline-bg-color: #000080;
-  --single-select-outline-text-color: #fff;
-
-  /* SINGLE SELECT DROPDOWN INDICATOR COLORS */
-  --single-select-dropdown-indicator-border-color-primary: #c0c0c0;
-  --single-select-dropdown-indicator-border-color-secondary: #000;
-  --single-select-dropdown-indicator-box-shadow-primary: #fff;
-  --single-select-dropdown-indicator-box-shadow-secondary: #84888c;
-  --single-select-dropdown-indicator-disabled-primary: #84888c;
-
-  /* SINGLE SELECT DROPDOWN MENU LIST COLORS */
-  --single-select-dropdown-menu-list-bg-color: #fff;
-  --single-select-dropdown-menu-list-border-color: #000;
-
-  /* SINGLE SELECT DROPDOWN MENU OPTION COLORS */
-  --single-select-dropdown-menu-option-selected-bg-color: #000080;
-  --single-select-dropdown-menu-option-selected-text-color: #fff;
-
-  /* BUTTON COLORS */
-  --button-bg-color: #c0c0c0;
-  --button-outline-color: #000;
-  --button-disabled-color: #84888c;
-  --button-border-color-primary: #fff;
-  --button-border-color-secondary: #1d1b1b;
-  --button-border-color-tertiary: #84888c;
-
-  /* SCROLLBAR COLORS */
-  --scrollbar-thumb-bg-color-primary: #c0c0c0;
-  --scrollbar-thumb-border-color-primary: #c0c0c0;
-  --scrollbar-thumb-border-color-secondary: #000;
-  --scrollbar-thumb-box-shadow-primary: #fff;
-  --scrollbar-thumb-box-shadow-secondary: #84888c;
+  /* SYSTEM COLORS */
+  --system-disabled-01: #84888c;
+  --system-disabled-02: #c0c0c0;
+  --system-error-01: #d9534f;
+  --system-bg-01: #fff;
+  --system-bg-02: #000;
+  --system-bg-03: #000080;
+  --system-bg-04: #c0c0c0;
+  --system-border-01: #84888c;
+  --system-border-02: #fff;
+  --system-border-03: #000;
+  --system-border-04: #1d1b1b;
+  --system-border-05: #c0c0c0;
+  --system-box-shadow-01: #000;
+  --system-box-shadow-02: #c0c0c0;
+  --system-box-shadow-03: #fff;
+  --system-box-shadow-04: #84888c;
+  --system-outline-01: #000;
+  --system-outline-02: #fff;
+  --system-placeholder-01: #c0c0c0;
+  --system-selected-text-01: #fff;
 }

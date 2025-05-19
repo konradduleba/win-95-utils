@@ -1,7 +1,6 @@
 .menuWrapper {
   --border-size: 1.5px;
 
-  border: var(--border-size) solid
-    var(--single-select-dropdown-menu-list-border-color);
-  background-color: var(--single-select-dropdown-menu-list-bg-color);
+  border: var(--border-size) solid var(--system-border-03);
+  background-color: var(--system-bg-01);
 }

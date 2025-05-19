@@ -5,7 +5,7 @@ $font-size: 16px;
 $height: calc($font-size + $padding * 2);
 
 .input {
-  background-color: var(--input-text-bg-color);
+  background-color: var(--system-bg-01);
   padding: $padding;
   font-size: $font-size;
   line-height: calc($padding + $font-size);
@@ -13,22 +13,16 @@ $height: calc($font-size + $padding * 2);
   outline: none;
 
   &:disabled {
-    background-color: var(--input-text-disabled-color-secondary);
+    background-color: var(--system-disabled-02);
   }
 
-  @include assign-border-colors(
-    --input-text-border-color-primary,
-    --input-text-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-01, --system-border-02);
 
-  @include inset-box-shadow(
-    --input-text-box-shadow-primary,
-    --input-text-box-shadow-secondary
-  );
+  @include inset-box-shadow(--system-box-shadow-01, --system-box-shadow-02);
 }
 
 .invalid {
-  border-color: var(--input-text-error-color);
+  border-color: var(--system-error-01);
 
-  @include inset-box-shadow(--input-text-error-color, --input-text-error-color);
+  @include inset-box-shadow(--system-error-01, --system-error-01);
 }

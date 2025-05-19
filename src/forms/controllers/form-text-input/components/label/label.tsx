@@ -1,8 +1,6 @@
 import { FC } from "react";
 import cn from "classnames";
 
-import { Text } from "@typography/text";
-
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 
 import { useFormTextInput } from "../../hooks";
@@ -21,14 +19,15 @@ export const Label: FC = () => {
     : triggerKeys;
 
   return (
-    <label htmlFor={name} className={styles.label}>
-      <Text size="md" className={cn({ [styles.disabled]: disabled })}>
-        <TextWithDecoratedLetter
-          text={label}
-          letter={decoratedLetter}
-          textDecoration="underline"
-        />
-      </Text>
+    <label
+      htmlFor={name}
+      className={cn(styles.label, { [styles.disabled]: disabled })}
+    >
+      <TextWithDecoratedLetter
+        text={label}
+        letter={decoratedLetter}
+        textDecoration="underline"
+      />
     </label>
   );
 };

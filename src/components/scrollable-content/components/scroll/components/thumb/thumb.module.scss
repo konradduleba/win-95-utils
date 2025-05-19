@@ -3,15 +3,9 @@
 .thumb {
   border-radius: unset !important;
   cursor: default !important;
-  background-color: var(--scrollbar-thumb-bg-color-primary) !important;
+  background-color: var(--system-bg-04) !important;
 
-  @include assign-border-colors(
-    --scrollbar-thumb-border-color-primary,
-    --scrollbar-thumb-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-05, --system-border-03);
 
-  @include inset-box-shadow(
-    --scrollbar-thumb-box-shadow-primary,
-    --scrollbar-thumb-box-shadow-secondary
-  );
+  @include inset-box-shadow(--system-box-shadow-03, --system-box-shadow-04);
 }

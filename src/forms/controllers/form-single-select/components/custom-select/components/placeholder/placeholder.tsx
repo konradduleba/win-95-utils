@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { PlaceholderProps } from "react-select";
 
-import { Text } from "@typography/text/text";
+import { Typography } from "@typography/typography";
 
 import { useFocusOnKeyPress } from "@hooks/useFocusOnKeyPress";
 
@@ -28,7 +28,7 @@ export const Placeholder: FC<PlaceholderProps> = ({
       ref={elementRef}
       data-testid={SINGLE_SELECT_PLACEHOLDER}
     >
-      <Text size="md">{children}</Text>
+      <Typography variant="span">{children}</Typography>
     </div>
   );
 };

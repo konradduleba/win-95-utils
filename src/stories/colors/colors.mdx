@@ -1,0 +1,13 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/blocks";
+
+import { SYSTEM_LIST } from "./mocks";
+
+<Meta title="System/Colors" />
+
+# Colors
+
+<ColorPalette>
+  {SYSTEM_LIST.map(({ name, colors }) => (
+    <ColorItem key={name} title={name} colors={colors} />
+  ))}
+</ColorPalette>

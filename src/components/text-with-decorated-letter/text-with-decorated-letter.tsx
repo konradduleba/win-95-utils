@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import { Typography } from "@typography/typography";
+
 export type TextWithDecoratedLetterProps = {
   text: string;
   letter: string;
@@ -16,12 +18,13 @@ export const TextWithDecoratedLetter: FC<TextWithDecoratedLetterProps> = ({
   return (
     <>
       {text.split("").map((char, index) => (
-        <span
+        <Typography
+          variant="span"
           key={index}
           style={index === firstIndex ? { textDecoration } : undefined}
         >
           {char}
-        </span>
+        </Typography>
       ))}
     </>
   );

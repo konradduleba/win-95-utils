@@ -6,39 +6,30 @@
   height: 100%;
   width: 100%;
   min-height: 28px;
-  background-color: var(--button-bg-color);
+  background-color: var(--system-bg-04);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @include assign-border-colors(
-    --button-border-color-primary,
-    --button-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-02, --system-border-04);
 
-  @include inset-box-shadow-on-right-and-bottom(--button-border-color-tertiary);
+  @include inset-box-shadow-on-right-and-bottom(--system-border-01);
 
   &:focus {
-    border-color: var(--button-border-color-secondary);
-    outline: 1px dashed var(--button-outline-color);
+    border-color: var(--system-border-04);
+    outline: 1px dashed var(--system-outline-01);
     outline-offset: var(--button-outline-offset);
 
-    @include inset-box-shadow(
-      --button-border-color-primary,
-      --button-border-color-secondary
-    );
+    @include inset-box-shadow(--system-border-02, --system-border-04);
   }
 
   &:active:not(:disabled) {
     padding: 3px 0 0 3px;
 
-    @include inset-box-shadow(
-      --button-border-color-tertiary,
-      --button-border-color-tertiary
-    );
+    @include inset-box-shadow(--system-border-01, --system-border-01);
   }
 
   &:disabled {
-    color: var(--button-disabled-color);
+    color: var(--system-disabled-01);
   }
 }

@@ -2,7 +2,7 @@ import { FC } from "react";
 import { OptionProps } from "react-select";
 import cn from "classnames";
 
-import { Text } from "@typography/text/text";
+import { Typography } from "@typography/typography";
 
 import { useSetOptionRef } from "./hooks";
 
@@ -26,7 +26,7 @@ export const Option: FC<OptionProps> = ({
         [styles.selected]: isSelected && isFocused,
       })}
     >
-      <Text size="md">{label}</Text>
+      <Typography variant="span">{label}</Typography>
     </div>
   );
 };

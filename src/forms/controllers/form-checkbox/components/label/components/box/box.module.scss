@@ -5,33 +5,24 @@ $size: 18px;
 .box {
   height: $size;
   width: $size;
-  background-color: var(--input-checkbox-bg-color);
+  background-color: var(--system-bg-01);
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @include assign-border-colors(
-    --input-checkbox-border-color-primary,
-    --input-checkbox-border-color-secondary
-  );
+  @include assign-border-colors(--system-border-01, --system-border-02);
 
-  @include inset-box-shadow(
-    --input-checkbox-box-shadow-primary,
-    --input-checkbox-box-shadow-secondary
-  );
+  @include inset-box-shadow(--system-box-shadow-01, --system-box-shadow-02);
 }
 
 .disabled {
-  background-color: var(--input-checkbox-disabled-color-secondary);
+  background-color: var(--system-disabled-02);
 }
 
 .invalid {
-  border-color: var(--input-checkbox-error-color);
+  border-color: var(--system-error-01);
 
-  @include inset-box-shadow(
-    --input-checkbox-error-color,
-    --input-checkbox-error-color
-  );
+  @include inset-box-shadow(--system-error-01, --system-error-01);
 }
 
 .icon {
