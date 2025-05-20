@@ -15,7 +15,7 @@ export const DropdownIndicator: FC<DropdownIndicatorProps> = ({
   innerProps,
   isDisabled,
 }) => {
-  const { ariaHidden, onHandleClick, onHandleKeyDown } = getButtonHandlers({
+  const { ariaHidden, onHandleKeyDown, onHandleTouchEnd } = getButtonHandlers({
     innerProps,
   });
 
@@ -23,9 +23,9 @@ export const DropdownIndicator: FC<DropdownIndicatorProps> = ({
     <ActionButton
       disabled={isDisabled}
       aria-hidden={ariaHidden}
-      onClick={onHandleClick}
       onKeyDown={onHandleKeyDown}
       aria-label={SINGLE_SELECT_DROPDOWN_INDICATOR}
+      onTouchEnd={onHandleTouchEnd}
     >
       <SvgChevron className={styles.chevron} />
     </ActionButton>
