@@ -3,15 +3,9 @@
   align-items: center;
 }
 
-.noLabel {
-  grid-template-columns: 1fr;
-  row-gap: 2px;
-}
-
 .row {
   grid-template-columns: auto 1fr;
   column-gap: 8px;
-  row-gap: 2px;
 }
 
 .column {

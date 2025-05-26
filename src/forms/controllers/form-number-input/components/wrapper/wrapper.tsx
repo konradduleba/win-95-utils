@@ -18,17 +18,14 @@ const LABEL_POSITIONS: LabelPositions = {
 };
 
 export const Wrapper: FC<PropsWithChildren> = ({ children }) => {
-  const { name, labelPosition } = useFormNumberInput();
+  const { name, labelPosition = "column" } = useFormNumberInput();
 
   const testId = `number-input-wrapper-${name}`;
 
   return (
     <div
       data-testid={testId}
-      className={cn(
-        styles.wrapper,
-        labelPosition ? LABEL_POSITIONS[labelPosition] : styles.noLabel
-      )}
+      className={cn(styles.wrapper, LABEL_POSITIONS[labelPosition])}
     >
       {children}
     </div>
