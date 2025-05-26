@@ -26,8 +26,7 @@ export class FormTextInputBuilder {
   }
 
   async changeInputValue({ newValue }: ChangeInputValueProps) {
-    await userEvent.clear(this.input);
-    expect(this.input).toHaveValue("");
+    await this.clearInputValue();
 
     await userEvent.type(this.input, newValue);
 

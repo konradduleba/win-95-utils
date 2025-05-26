@@ -1,0 +1,6 @@
+.container {
+  height: var(--input-height);
+
+  --button-size-height: calc(var(--input-height) / 2);
+  --icon-size: 4px;
+}

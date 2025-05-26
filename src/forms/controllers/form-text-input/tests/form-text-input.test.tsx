@@ -10,6 +10,7 @@ import {
   TEST_CUSTOM_ERROR_MESSAGE,
   TEST_LABEL,
   TEST_TRIGGER_KEY,
+  TEST_VALUE,
 } from "./mocks";
 
 import {
@@ -109,5 +110,11 @@ describe("Test coverage for Form Text Input", () => {
     const { input } = await renderTextInput(<WithDisabled />);
 
     expect(input.input).toBeDisabled();
+  });
+
+  test(`Should change value to ${TEST_VALUE}`, async () => {
+    const { input } = await renderTextInput(<WithLabel />);
+
+    await input.changeInputValue({ newValue: TEST_VALUE });
   });
 });

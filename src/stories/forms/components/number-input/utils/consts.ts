@@ -1,0 +1,1 @@
+export const NUMBER_INPUT_FALLBACK_VALUE = "";

@@ -1,0 +1,10 @@
+@use "@styles/mixins" as *;
+
+.input {
+  background-color: transparent;
+  padding: calc(var(--padding) / 2) var(--padding);
+  font-size: var(--font-size);
+  height: var(--input-height);
+  outline: none;
+  border: none;
+}

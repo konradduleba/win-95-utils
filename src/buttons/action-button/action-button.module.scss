@@ -1,12 +1,12 @@
 @use "@styles/mixins" as *;
 
-$button-size: 18px;
+$button-fallback-size: 18px;
 
 .button {
-  min-height: $button-size;
-  min-width: $button-size;
-  width: $button-size;
-  height: $button-size;
+  min-height: var(--button-size-height, $button-fallback-size);
+  min-width: var(--button-size-width, $button-fallback-size);
+  width: var(--button-size-width, $button-fallback-size);
+  height: var(--button-size-height, $button-fallback-size);
   outline: none !important;
 
   @include assign-border-colors(--system-border-05, --system-border-03);

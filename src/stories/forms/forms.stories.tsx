@@ -6,7 +6,13 @@ import {
 } from "./components/text-input/mocks";
 import { RADIOBOX_OPTIONS } from "./components/radiobox/mocks";
 
-import { Checkbox, Radiobox, SingleSelect, TextInput } from "./components";
+import {
+  Checkbox,
+  Radiobox,
+  SingleSelect,
+  TextInput,
+  NumberInput,
+} from "./components";
 
 const meta: Meta = {
   title: "Forms",
@@ -80,5 +86,28 @@ export const SingleSelectStory: StoryObj<typeof SingleSelect> = {
     label: "Example label",
     isClearable: false,
     isMenuOpen: false,
+  },
+};
+
+export const NumberInputStory: StoryObj<typeof NumberInput> = {
+  name: "Number input",
+  render: (args) => <NumberInput {...args} />,
+  args: {
+    label: "Example label",
+    max: 2137,
+    min: 0,
+    step: 1,
+    triggerKeys: ["E", "e"],
+    disabled: false,
+  },
+  argTypes: {
+    labelPosition: {
+      control: "select",
+      options: LABEL_POSITIONS,
+      if: {
+        arg: "label",
+        neq: "",
+      },
+    },
   },
 };
