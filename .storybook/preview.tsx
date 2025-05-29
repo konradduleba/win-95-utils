@@ -6,6 +6,8 @@ import { MainAppProviders } from "@providers/main-app-providers/main-app-provide
 import "normalize.css";
 import "@styles/overrides.css";
 import "@styles/colors.css";
+import "@styles/font-sizes.css";
+import "@styles/spacing.css";
 
 const preview: Preview = {
   parameters: {

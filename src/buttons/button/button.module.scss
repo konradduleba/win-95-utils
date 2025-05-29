@@ -1,11 +1,11 @@
 @use "@styles/mixins" as *;
 
 .button {
-  --button-outline-offset: -6px;
+  --button-outline-offset: calc(var(--spacing-05) * -1);
 
   height: 100%;
   width: 100%;
-  min-height: 28px;
+  min-height: var(--spacing-13);
   background-color: var(--system-bg-04);
   display: flex;
   align-items: center;
@@ -17,14 +17,14 @@
 
   &:focus {
     border-color: var(--system-border-04);
-    outline: 1px dashed var(--system-outline-01);
+    outline: var(--spacing-01) dashed var(--system-outline-01);
     outline-offset: var(--button-outline-offset);
 
     @include inset-box-shadow(--system-border-02, --system-border-04);
   }
 
   &:active:not(:disabled) {
-    padding: 3px 0 0 3px;
+    padding: var(--spacing-03) 0 0 var(--spacing-03);
 
     @include inset-box-shadow(--system-border-01, --system-border-01);
   }

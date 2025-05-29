@@ -1,14 +1,14 @@
 @use "@styles/mixins" as *;
 
 .inputWrapper {
-  --padding: 4px;
-  --font-size: 16px;
-  --input-height: 18px;
+  --padding: var(--spacing-04);
+  --font-size: var(--font-size-04);
+  --input-height: var(--spacing-10);
 
   background-color: var(--system-bg-01);
   outline: none;
   display: grid;
-  grid-template-columns: 1fr 18px;
+  grid-template-columns: 1fr var(--spacing-10);
   line-height: calc(var(--padding) + var(--font-size));
   height: calc(var(--font-size) + var(--padding) * 2);
   align-items: center;

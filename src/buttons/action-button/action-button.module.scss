@@ -1,6 +1,6 @@
 @use "@styles/mixins" as *;
 
-$button-fallback-size: 18px;
+$button-fallback-size: var(--spacing-10);
 
 .button {
   min-height: var(--button-size-height, $button-fallback-size);
@@ -20,7 +20,7 @@ $button-fallback-size: 18px;
   }
 
   &:active:not(:disabled) {
-    padding: 2px 0 0 2px;
+    padding: var(--spacing-02) 0 0 var(--spacing-02);
 
     @include assign-border-colors(
       --system-box-shadow-04,

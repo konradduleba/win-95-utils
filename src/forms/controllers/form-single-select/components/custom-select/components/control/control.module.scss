@@ -1,7 +1,7 @@
 @use "@styles/mixins" as *;
 
-$height: 24px;
-$line-height: 20px;
+$height: var(--spacing-12);
+$line-height: var(--spacing-11);
 $padding-right: 1.5px;
 
 .control {

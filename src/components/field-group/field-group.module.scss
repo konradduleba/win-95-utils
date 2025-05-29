@@ -1,0 +1,22 @@
+@use "@styles/mixins" as *;
+
+.wrapper {
+  position: relative;
+  background-color: var(--system-bg-04);
+  padding: var(--spacing-06);
+  padding-top: var(--spacing-09);
+
+  @include assign-border-colors-with-shadow(
+    --system-border-01,
+    --system-border-02
+  );
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  background-color: var(--system-bg-04);
+  padding-left: var(--spacing-04);
+  padding-right: var(--spacing-04);
+}

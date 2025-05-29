@@ -1,0 +1,23 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Canvas,
+  Unstyled,
+} from "@storybook/blocks";
+
+import { FONT_SIZES, HEADINGS } from "./mocks";
+
+import { Row, Heading } from "./components";
+
+<Meta title="System/Font Sizes" />
+
+# Font Sizes
+
+<Unstyled>
+  <Heading headings={HEADINGS} />
+  {FONT_SIZES.map((fontSize, index) => (
+    <Row key={fontSize} sizeId={index + 1} size={fontSize} />
+  ))}
+</Unstyled>

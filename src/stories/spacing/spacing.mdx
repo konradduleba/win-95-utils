@@ -1,0 +1,23 @@
+import {
+  Meta,
+  Title,
+  Subtitle,
+  Description,
+  Canvas,
+  Unstyled,
+} from "@storybook/blocks";
+
+import { SPACING, HEADINGS } from "./mocks";
+
+import { Row, Heading } from "./components";
+
+<Meta title="System/Spacing" />
+
+# Spacing
+
+<Unstyled>
+  <Heading headings={HEADINGS} />
+  {SPACING.map((singleSpacing, index) => (
+    <Row key={singleSpacing} sizeId={index + 1} size={singleSpacing} />
+  ))}
+</Unstyled>

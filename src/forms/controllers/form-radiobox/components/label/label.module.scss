@@ -2,12 +2,12 @@
   --text-outline: none;
 
   display: flex;
-  gap: 4px;
+  gap: var(--spacing-04);
   align-items: center;
   outline: none;
   width: fit-content;
 
   &:focus {
-    --text-outline: 1px dashed var(--system-outline-01);
+    --text-outline: var(--spacing-01) dashed var(--system-outline-01);
   }
 }

@@ -1,6 +1,6 @@
 @use "@styles/mixins" as *;
 
-$size: 18px;
+$size: var(--spacing-10);
 
 .box {
   height: $size;
@@ -26,5 +26,5 @@ $size: 18px;
 }
 
 .icon {
-  font-size: 8px;
+  font-size: var(--font-size-01);
 }

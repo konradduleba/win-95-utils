@@ -1,7 +1,7 @@
 @use "@styles/mixins" as *;
 
-$padding: 4px;
-$font-size: 16px;
+$padding: var(--spacing-04);
+$font-size: var(--font-size-04);
 $height: calc($font-size + $padding * 2);
 
 .input {
