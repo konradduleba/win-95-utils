@@ -8,6 +8,7 @@ import "@styles/overrides.css";
 import "@styles/colors.css";
 import "@styles/font-sizes.css";
 import "@styles/spacing.css";
+import "@styles/variables.css";
 
 const preview: Preview = {
   parameters: {

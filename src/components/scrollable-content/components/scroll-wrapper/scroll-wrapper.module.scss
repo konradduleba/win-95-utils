@@ -1,6 +1,8 @@
 .wrapper {
   --scrollbar-width: var(--spacing-10);
   --button-size: var(--spacing-10);
+
+  position: relative;
 }
 
 .fullLengthItem {

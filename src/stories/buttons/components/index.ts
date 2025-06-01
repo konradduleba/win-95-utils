@@ -1,2 +1,2 @@
 export { DefaultButton } from "./default-button";
-export { TextDecoratedButton } from "./text-decorated-button";
+export { ActionButtonExample } from "./action-button-example";

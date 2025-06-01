@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { DefaultButton, TextDecoratedButton } from "./components";
+import { DefaultButton, ActionButtonExample } from "./components";
 
 const meta: Meta = {
   title: "Buttons",
@@ -9,7 +9,7 @@ const meta: Meta = {
 export default meta;
 
 export const DefaultButtonStory: StoryObj<typeof DefaultButton> = {
-  name: "Default",
+  name: "Button",
   render: (args) => <DefaultButton {...args} />,
   args: {
     textValue: "Apply",
@@ -17,12 +17,10 @@ export const DefaultButtonStory: StoryObj<typeof DefaultButton> = {
   },
 };
 
-export const TextDecoratedStory: StoryObj<typeof TextDecoratedButton> = {
-  name: "Text Decorated",
-  render: (args) => <TextDecoratedButton {...args} />,
+export const ActionButtonStory: StoryObj<typeof DefaultButton> = {
+  name: "Action Button",
+  render: (args) => <ActionButtonExample {...args} />,
   args: {
-    textValue: "Apply",
     disabled: false,
-    triggerKeys: ["A", "a"],
   },
 };

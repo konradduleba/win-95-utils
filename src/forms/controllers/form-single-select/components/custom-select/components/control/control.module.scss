@@ -2,7 +2,7 @@
 
 $height: var(--spacing-12);
 $line-height: var(--spacing-11);
-$padding-right: 1.5px;
+$padding-right: var(--border-size);
 
 .control {
   background-color: var(--system-bg-01);

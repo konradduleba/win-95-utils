@@ -13,13 +13,13 @@ $chevron-size: var(--spacing-06);
 .bottom {
   position: absolute;
   z-index: 1;
-  right: var(--border-size, 0);
+  right: 0;
 }
 
 .top {
-  top: var(--border-size, 0);
+  top: 0;
 }
 
 .bottom {
-  bottom: var(--border-size, 0);
+  bottom: 0;
 }

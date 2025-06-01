@@ -4,7 +4,7 @@
 
   &:focus:not(.disabled) {
     outline: var(--spacing-01) dashed var(--system-outline-02);
-    outline-offset: -1.5px;
+    outline-offset: -var(--border-size);
     color: var(--system-outline-02);
     background-color: var(--system-bg-03);
   }
