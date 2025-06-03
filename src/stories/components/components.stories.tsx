@@ -2,7 +2,7 @@ import { FieldGroup } from "@components/field-group/field-group";
 import { ScrollableContent } from "@components/scrollable-content/scrollable-content";
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 
 import { FieldGroupExample, ScrollableContentExample } from "./components";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 
 import { MainAppProviders } from "@providers/main-app-providers/main-app-providers";
 
