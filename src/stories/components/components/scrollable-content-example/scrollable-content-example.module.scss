@@ -2,11 +2,6 @@
 
 .wrapper {
   background-color: var(--system-bg-01);
-  padding: var(--border-size);
-
-  @include assign-border-colors(--system-border-01, --system-border-02);
-
-  @include inset-box-shadow(--system-box-shadow-01, --system-box-shadow-02);
 }
 
 .container {

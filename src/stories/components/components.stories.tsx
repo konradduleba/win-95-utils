@@ -4,7 +4,12 @@ import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/
 
 import { Meta, StoryObj } from "@storybook/react-vite";
 
-import { FieldGroupExample, ScrollableContentExample } from "./components";
+import {
+  FieldGroupExample,
+  ScrollableContentExample,
+  BoxBorderExample,
+  BoxBorderExampleProps,
+} from "./components";
 
 const meta: Meta = {
   title: "Components",
@@ -45,5 +50,13 @@ export const TextWithDecoratedLetterStory: StoryObj<
       control: "select",
       options: ["underline", "overline", "line-through", "none"],
     },
+  },
+};
+
+export const BoxBorderStory: StoryObj<typeof BoxBorderExample> = {
+  name: "Box Border",
+  render: (args: BoxBorderExampleProps) => <BoxBorderExample {...args} />,
+  args: {
+    backgroundColor: "#54A8A8",
   },
 };
