@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import { Tabs } from "@components/tabs";
+import { Tabs } from "@components/tabs/tabs";
 
 import { MOCKED_TABS, TABS_ID } from "./mocks";
 

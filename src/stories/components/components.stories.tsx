@@ -1,7 +1,7 @@
 import { FieldGroup } from "@components/field-group/field-group";
 import { ScrollableContent } from "@components/scrollable-content/scrollable-content";
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
-import { Tabs } from "@components/tabs";
+import { Tabs } from "@components/tabs/tabs";
 
 import { Meta, StoryObj } from "@storybook/react-vite";
 
