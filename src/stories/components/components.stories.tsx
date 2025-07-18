@@ -10,7 +10,9 @@ import {
   ScrollableContentExample,
   BoxBorderExample,
   TabsExample,
+  TooltipExample,
 } from "./components";
+import { Tooltip } from "@components/tooltip/tooltip";
 
 const meta: Meta = {
   title: "Components",
@@ -65,4 +67,19 @@ export const BoxBorderStory: StoryObj<typeof BoxBorderExample> = {
 export const TabsStory: StoryObj<typeof Tabs> = {
   name: "Tabs",
   render: () => <TabsExample />,
+};
+
+export const TooltipStory: StoryObj<typeof Tooltip> = {
+  name: "Tooltip",
+  render: (args) => <TooltipExample {...args} />,
+  args: {
+    message: "Tooltip custom Message",
+    placement: "bottomRight",
+  },
+  argTypes: {
+    placement: {
+      control: "select",
+      options: ["bottomRight", "bottomLeft", "topRight", "topLeft"],
+    },
+  },
 };

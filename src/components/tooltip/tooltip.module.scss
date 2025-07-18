@@ -1,0 +1,45 @@
+$aligment-value: 80%;
+
+.tooltip {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  display: none;
+  position: absolute;
+  content: attr(data-tooltip);
+  border-width: var(--spacing-01);
+  border-style: solid;
+  border-color: var(--system-border-02) var(--system-border-04)
+    var(--system-border-04) var(--system-border-02);
+  background-color: var(--system-bg-04);
+  padding: var(--spacing-02) var(--spacing-04);
+  white-space: nowrap;
+  z-index: 10;
+  font-size: var(--font-size-04);
+  line-height: var(--font-size-04);
+}
+
+[data-tooltip]:hover::after {
+  display: block;
+}
+
+.topRight[data-tooltip]::after {
+  right: 0;
+  bottom: $aligment-value;
+}
+
+.topLeft[data-tooltip]::after {
+  left: 0;
+  bottom: $aligment-value;
+}
+
+.bottomLeft[data-tooltip]::after {
+  left: 0;
+  top: $aligment-value;
+}
+
+.bottomRight[data-tooltip]::after {
+  right: 0;
+  top: $aligment-value;
+}
