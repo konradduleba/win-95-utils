@@ -1,7 +1,7 @@
 @mixin inset-box-shadow-on-right-and-bottom($color) {
   $size: var(--border-size);
 
-  box-shadow: inset (-$size) (-$size) 0 0 var(#{$color});
+  box-shadow: inset calc($size * -1) calc($size * -1) 0 0 var(#{$color});
 }
 
 @mixin inset-box-shadow-on-left-and-top($color) {
@@ -39,4 +39,18 @@
 
   box-shadow: inset 0 $size 0 0 var($shadowColor), 0 $size 0 0 var($shadowColor),
     inset $size 0 0 0 var($shadowColor), $size 0 0 0 var($shadowColor);
+}
+
+@mixin clear-bottom-border-and-shadow($color) {
+  $size: var(--border-size);
+
+  border-bottom: unset;
+
+  box-shadow: inset calc($size * -1) 0 0 0 var(#{$color});
+}
+
+@mixin box-shadow-at-the-right($color) {
+  $size: var(--border-size);
+
+  box-shadow: inset calc($size * -1) 0 0 0 var(#{$color});
 }

@@ -1,0 +1,52 @@
+@use "@styles/mixins" as *;
+
+.headers {
+  --item-outline-offset: calc(var(--spacing-05) * -1);
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  outline: none;
+
+  &:focus {
+    .selected {
+      outline: var(--spacing-01) dashed var(--system-outline-01);
+      outline-offset: var(--item-outline-offset);
+    }
+  }
+}
+
+.tabItem {
+  width: unset;
+  height: var(--spacing-13);
+  border-radius: var(--spacing-05) var(--spacing-05) 0 0;
+  position: relative;
+
+  @include assign-border-colors(--system-border-02, --system-border-04);
+
+  border-bottom: unset;
+}
+
+.itemContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: var(--spacing-06);
+  padding-right: var(--spacing-06);
+  border-right: var(--border-size) solid var(--system-border-01);
+  position: relative;
+}
+
+.overrideBottomBar {
+  position: absolute;
+  height: var(--border-size);
+  background-color: var(--system-border-05);
+  bottom: calc(var(--border-size) * -1);
+  left: 0;
+  right: calc(var(--border-size) * 2 * -1);
+}
+
+.selected {
+  height: var(--spacing-14);
+}

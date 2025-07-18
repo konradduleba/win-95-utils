@@ -1,0 +1,1 @@
+export { useHandleHeadersNavigation } from "./useHandleHeadersNavigation";

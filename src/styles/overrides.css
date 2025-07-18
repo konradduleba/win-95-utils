@@ -13,3 +13,7 @@
 body {
   background-color: #c0c0c0;
 }
+
+ul {
+  list-style: none;
+}

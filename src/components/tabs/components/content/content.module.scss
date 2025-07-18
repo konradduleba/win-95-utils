@@ -1,0 +1,6 @@
+@use "@styles/mixins" as *;
+
+.content {
+  @include assign-border-colors(--system-border-02, --system-border-03);
+  @include inset-box-shadow-on-right-and-bottom(--system-border-01);
+}

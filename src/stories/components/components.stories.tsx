@@ -1,6 +1,7 @@
 import { FieldGroup } from "@components/field-group/field-group";
 import { ScrollableContent } from "@components/scrollable-content/scrollable-content";
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
+import { Tabs } from "@components/tabs";
 
 import { Meta, StoryObj } from "@storybook/react-vite";
 
@@ -8,7 +9,7 @@ import {
   FieldGroupExample,
   ScrollableContentExample,
   BoxBorderExample,
-  BoxBorderExampleProps,
+  TabsExample,
 } from "./components";
 
 const meta: Meta = {
@@ -55,8 +56,13 @@ export const TextWithDecoratedLetterStory: StoryObj<
 
 export const BoxBorderStory: StoryObj<typeof BoxBorderExample> = {
   name: "Box Border",
-  render: (args: BoxBorderExampleProps) => <BoxBorderExample {...args} />,
+  render: (args) => <BoxBorderExample {...args} />,
   args: {
     backgroundColor: "#54A8A8",
   },
+};
+
+export const TabsStory: StoryObj<typeof Tabs> = {
+  name: "Tabs",
+  render: () => <TabsExample />,
 };
