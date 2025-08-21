@@ -1,1 +1,1 @@
-export { BoxBorder, type BoxBorderProps } from "./box-border";
+export { BoxBorder } from "./box-border";
