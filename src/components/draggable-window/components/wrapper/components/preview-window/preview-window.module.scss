@@ -1,0 +1,16 @@
+.dash {
+  position: absolute;
+  z-index: 12;
+  width: var(--spacing-02);
+  height: var(--spacing-01);
+  background-color: var(--system-overlap-01);
+}
+
+.verticalDash {
+  width: var(--spacing-01);
+  height: var(--spacing-02);
+}
+
+.overlapping {
+  background-color: var(--system-overlap-02);
+}

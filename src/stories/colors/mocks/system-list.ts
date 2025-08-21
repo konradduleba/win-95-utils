@@ -66,6 +66,14 @@ const SELECTED_TEXT_COLOR = {
   },
 };
 
+const OVERLAP_COLOR = {
+  name: "Overlap",
+  colors: {
+    "01": "#d9534f",
+    "02": "#fff",
+  },
+};
+
 export const SYSTEM_LIST = [
   DISABLED_COLOR,
   ERROR_COLOR,
@@ -75,4 +83,5 @@ export const SYSTEM_LIST = [
   OUTLINE_COLOR,
   PLACEHOLDER_COLOR,
   SELECTED_TEXT_COLOR,
+  OVERLAP_COLOR,
 ];

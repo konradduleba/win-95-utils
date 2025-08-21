@@ -3,3 +3,4 @@ export { ScrollableContentExample } from "./scrollable-content-example/scrollabl
 export { BoxBorderExample } from "./box-border-example/box-border-example";
 export { TabsExample } from "./tabs-example/tabs-example";
 export { TooltipExample } from "./tooltip-example/tooltip-example";
+export { DraggableWindowExample } from "./draggable-window-example/draggable-window-example";

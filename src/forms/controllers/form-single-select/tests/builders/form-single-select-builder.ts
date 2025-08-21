@@ -64,6 +64,8 @@ export class FormSingleSelectBuilder {
 
     const menuList = await within(this.wrapper).findByRole("listbox");
 
+    console.log({ menuList });
+
     expect(menuList).toBeInTheDocument();
 
     const options = within(menuList).getAllByRole<HTMLDivElement>("option");

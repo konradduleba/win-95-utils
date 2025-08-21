@@ -1,0 +1,24 @@
+@use "@styles/mixins" as *;
+
+$icon-size: var(--spacing-08);
+
+.actions {
+  display: flex;
+  gap: var(--spacing-03);
+}
+
+.button {
+  @include assign-border-colors(--system-border-02, --system-border-03);
+  @include inset-box-shadow(--system-box-shadow-02, --system-box-shadow-04);
+
+  &:active:not(:disabled) {
+    @include assign-border-colors(--system-border-03, --system-border-02);
+
+    @include inset-box-shadow(--system-border-01, --system-border-05);
+  }
+
+  svg {
+    width: $icon-size;
+    height: $icon-size;
+  }
+}

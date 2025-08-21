@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--system-bg-03);
+  margin: var(--spacing-01);
+  padding: var(--spacing-03);
+}
+
+.inactive {
+  background-color: var(--system-disabled-01);
+}

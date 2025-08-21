@@ -2,6 +2,8 @@ import { FieldGroup } from "@components/field-group/field-group";
 import { ScrollableContent } from "@components/scrollable-content/scrollable-content";
 import { TextWithDecoratedLetter } from "@components/text-with-decorated-letter/text-with-decorated-letter";
 import { Tabs } from "@components/tabs/tabs";
+import { Tooltip } from "@components/tooltip/tooltip";
+import { DraggableWindow } from "@components/draggable-window/draggable-window";
 
 import { Meta, StoryObj } from "@storybook/react-vite";
 
@@ -11,8 +13,8 @@ import {
   BoxBorderExample,
   TabsExample,
   TooltipExample,
+  DraggableWindowExample,
 } from "./components";
-import { Tooltip } from "@components/tooltip/tooltip";
 
 const meta: Meta = {
   title: "Components",
@@ -61,6 +63,13 @@ export const BoxBorderStory: StoryObj<typeof BoxBorderExample> = {
   render: (args) => <BoxBorderExample {...args} />,
   args: {
     backgroundColor: "#54A8A8",
+    variant: "01",
+  },
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["01", "02"],
+    },
   },
 };
 
@@ -81,5 +90,13 @@ export const TooltipStory: StoryObj<typeof Tooltip> = {
       control: "select",
       options: ["bottomRight", "bottomLeft", "topRight", "topLeft"],
     },
+  },
+};
+
+export const DraggableWindowStory: StoryObj<typeof DraggableWindow> = {
+  name: "Draggable Window",
+  render: (args) => <DraggableWindowExample {...args} />,
+  args: {
+    title: "Welcome",
   },
 };

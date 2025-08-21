@@ -2,8 +2,16 @@
 
 .box {
   padding: var(--border-size);
+}
 
+.border01 {
   @include assign-border-colors(--system-border-01, --system-border-02);
 
   @include inset-box-shadow(--system-box-shadow-01, --system-box-shadow-02);
+}
+
+.border02 {
+  @include assign-border-colors(--system-border-05, --system-border-03);
+
+  @include inset-box-shadow(--system-box-shadow-03, --system-box-shadow-04);
 }
